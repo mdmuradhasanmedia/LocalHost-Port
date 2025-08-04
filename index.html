@@ -2,66 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Localhost:Port - App Landing Page</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Custom Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to right, #4b2db6, #6f4cc8);
-      color: white;
-    }
-    .hero {
-      padding: 100px 0;
-      text-align: center;
-    }
-    .btn-download {
-      font-size: 1.1rem;
-      padding: 12px 24px;
-    }
-    .mockup {
-      max-width: 300px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leno App Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gradient-to-r from-indigo-700 to-purple-700 text-white font-sans">
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Localhost:Port</a>
-    <div class="d-none d-lg-flex ms-auto">
-      <a class="nav-link text-white" href="#">Home</a>
-      <a class="nav-link text-white" href="#">Features</a>
-      <a class="nav-link text-white" href="#">Contact</a>
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-6 max-w-7xl mx-auto">
+    <div class="text-xl font-bold flex items-center gap-2">
+      <img src="https://i.imgur.com/ZJpKHYk.png" class="w-6 h-6" alt="Leno Logo">
+      <span>Leno</span>
     </div>
-  </div>
-</nav>
+    <div class="space-x-6 hidden md:flex">
+      <a href="#" class="hover:text-blue-300">Home</a>
+      <a href="#" class="hover:text-blue-300">Features</a>
+      <a href="#" class="hover:text-blue-300">Preview</a>
+      <a href="#" class="hover:text-blue-300">Details</a>
+      <a href="#" class="hover:text-blue-300">Contact</a>
+    </div>
+    <div class="flex space-x-3">
+      <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook-new.png" class="w-5 h-5" /></a>
+      <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/twitter--v1.png" class="w-5 h-5" /></a>
+    </div>
+  </nav>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <div class="row align-items-center text-center text-lg-start">
-      <div class="col-lg-6">
-        <h1 class="display-4 fw-bold mb-3">MOBILE APP FOR <span class="text-info">DESIGNERS</span></h1>
-        <p class="lead mb-4">Localhost:Port is a simple and powerful mobile app that you can download and run easily.</p>
-        <a href="app.apk" class="btn btn-light btn-download" download>📱 Download APK</a>
-      </div>
-      <div class="col-lg-6 mt-5 mt-lg-0 text-center">
-        <img src="https://i.imgur.com/td1avzM.png" alt="App Screenshot" class="mockup img-fluid">
+  <!-- Hero Section -->
+  <section class="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-16 max-w-7xl mx-auto">
+    <!-- Text Content -->
+    <div class="md:w-1/2 text-center md:text-left space-y-6">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+        MOBILE APP <br><span class="text-blue-400">FOR DESIGNERS</span>
+      </h1>
+      <p class="text-lg text-gray-200">
+        Leno is one of the easiest and feature-packed marketing automation apps in the market. Download it today!
+      </p>
+      <div class="flex justify-center md:justify-start gap-4 mt-4">
+        <a href="#" class="bg-white text-black px-4 py-2 rounded-lg font-medium flex items-center gap-2">
+          <img src="https://img.icons8.com/ios-filled/24/000000/mac-os.png"/> App Store
+        </a>
+        <a href="#" class="bg-green-500 px-4 py-2 rounded-lg font-medium flex items-center gap-2">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/google-play.png"/> Play Store
+        </a>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Mobile Mockup -->
+    <div class="md:w-1/2 flex justify-center mb-10 md:mb-0">
+      <img src="https://i.imgur.com/td1avzM.png" alt="Leno App" class="w-72 drop-shadow-2xl" />
+    </div>
+  </section>
 
 </body>
 </html>
