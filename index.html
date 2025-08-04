@@ -3,19 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Download App</title>
+  <title>Localhost:Port – Download</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-800 font-sans flex items-center justify-center min-h-screen px-4">
 
-  <div class="text-center max-w-md mx-auto space-y-6">
-    <h1 class="text-3xl sm:text-4xl font-bold">
-      Download Our App
+  <!-- Main card -->
+  <div class="text-center max-w-md w-full space-y-6">
+
+    <!-- Logo -->
+    <!-- Replace `logo.png` with your own file or external URL -->
+    <img src="logo.png" alt="Localhost:Port logo" class="w-20 h-20 mx-auto">
+
+    <!-- App name -->
+    <h1 class="text-3xl sm:text-4xl font-extrabold">
+      Localhost:Port
     </h1>
+
+    <!-- Short description -->
     <p class="text-base sm:text-lg text-gray-600">
       Get the latest version of our mobile app. Fast, reliable, and secure.
     </p>
-    <a href="app.apk" download class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-base sm:text-lg font-semibold hover:bg-blue-700 transition">
+
+    <!-- Download button -->
+    <!-- Replace `app.apk` with the correct path/URL to your APK -->
+    <a href="app.apk" download
+       class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-base sm:text-lg font-semibold hover:bg-blue-700 transition">
       📥 Download APK
     </a>
   </div>
