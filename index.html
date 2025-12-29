@@ -1,37 +1,140 @@
-<!DOCTYPE html>
+<! DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Localhost:Port – Download</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .gradient-bg {
+      background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .feature-icon {
+      transition: transform 0.3s ease;
+    }
+    .feature-icon:hover {
+      transform: translateY(-5px);
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800 font-sans flex items-center justify-center min-h-screen px-4">
+<body class="gradient-bg text-gray-800 font-sans flex items-center justify-center min-h-screen px-4 py-8">
 
-  <!-- Main card -->
-  <div class="text-center max-w-md w-full space-y-6">
+  <!-- Main container -->
+  <div class="max-w-4xl w-full">
+    
+    <!-- Main card with glass effect -->
+    <div class="glass-effect rounded-3xl shadow-2xl p-8 sm:p-12 space-y-8">
+      
+      <!-- Header section -->
+      <div class="text-center space-y-4">
+        <!-- Logo with subtle animation -->
+        <div class="flex justify-center">
+          <img src="https://github.com/mdmuradhasanmedia/LocalHost-Port/blob/main/logo.jpeg?raw=true"
+               alt="Localhost:Port logo"
+               class="w-32 sm:w-40 md:w-44 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+        </div>
 
-    <!-- Logo (bigger size with responsive scaling) -->
-    <img src="https://github.com/mdmuradhasanmedia/LocalHost-Port/blob/main/logo.jpeg?raw=true"
-         alt="Localhost:Port logo"
-         class="w-32 sm:w-40 md:w-48 lg:w-56 mx-auto">
+        <!-- App name with gradient text -->
+        <h1 class="text-4xl sm: text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          Localhost:Port
+        </h1>
 
-    <!-- App name -->
-    <h1 class="text-3xl sm:text-4xl font-extrabold">
-      Localhost:Port
-    </h1>
+        <!-- Tagline -->
+        <p class="text-lg sm:text-xl text-gray-700 font-medium">
+          Access your local server on mobile devices
+        </p>
+      </div>
 
-    <!-- Short description -->
-    <p class="text-base sm:text-lg text-gray-600">
-      Get the latest version of LocalHost:Port mobile app.
-    </p>
+      <!-- Features grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 py-6">
+        
+        <div class="feature-icon text-center p-4 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100">
+          <div class="text-3xl mb-2">🚀</div>
+          <h3 class="font-semibold text-gray-800 mb-1">Fast & Secure</h3>
+          <p class="text-sm text-gray-600">Lightning-fast connections</p>
+        </div>
 
-    <!-- Download button -->
-    <a href="https://github.com/mdmuradhasanmedia/LocalHost-Port/raw/refs/heads/main/Localhost_Port%20v1.apk"
-       download
-       class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-base sm:text-lg font-semibold hover:bg-blue-700 transition">
-      Download LocalHost:Port APK
-    </a>
+        <div class="feature-icon text-center p-4 rounded-xl bg-gradient-to-br from-purple-50 to-purple-100">
+          <div class="text-3xl mb-2">📱</div>
+          <h3 class="font-semibold text-gray-800 mb-1">Mobile Ready</h3>
+          <p class="text-sm text-gray-600">Optimized for Android</p>
+        </div>
+
+        <div class="feature-icon text-center p-4 rounded-xl bg-gradient-to-br from-pink-50 to-pink-100">
+          <div class="text-3xl mb-2">⚡</div>
+          <h3 class="font-semibold text-gray-800 mb-1">Easy Setup</h3>
+          <p class="text-sm text-gray-600">One-tap installation</p>
+        </div>
+
+      </div>
+
+      <!-- Download section -->
+      <div class="space-y-4">
+        <div class="text-center">
+          <a href="https://github.com/mdmuradhasanmedia/LocalHost-Port/raw/refs/heads/main/Localhost_Port%20v1.apk"
+             download
+             class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300">
+            <span class="flex items-center gap-2 justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              Download APK (v1.0)
+            </span>
+          </a>
+        </div>
+        
+        <p class="text-center text-sm text-gray-500">
+          Compatible with Android 5.0 and above
+        </p>
+      </div>
+
+      <!-- Info section -->
+      <div class="border-t border-gray-200 pt-6 space-y-3">
+        <details class="group">
+          <summary class="cursor-pointer font-semibold text-gray-700 hover:text-blue-600 transition flex items-center gap-2">
+            <svg class="w-5 h-5 group-open:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            Installation Instructions
+          </summary>
+          <div class="mt-3 ml-7 text-sm text-gray-600 space-y-2">
+            <p>1. Download the APK file</p>
+            <p>2. Enable "Install from Unknown Sources" in settings</p>
+            <p>3. Open the downloaded file and install</p>
+            <p>4. Launch the app and start testing! </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Footer -->
+      <div class="text-center pt-4 border-t border-gray-200">
+        <p class="text-sm text-gray-500">
+          Built with ❤️ by 
+          <a href="https://github.com/mdmuradhasanmedia" 
+             class="text-blue-600 hover:text-purple-600 font-semibold transition">
+            mdmuradhasanmedia
+          </a>
+        </p>
+        <a href="https://github.com/mdmuradhasanmedia/LocalHost-Port" 
+           class="inline-block mt-2 text-sm text-gray-600 hover:text-gray-800 transition">
+          View on GitHub →
+        </a>
+      </div>
+
+    </div>
+
   </div>
 
 </body>
